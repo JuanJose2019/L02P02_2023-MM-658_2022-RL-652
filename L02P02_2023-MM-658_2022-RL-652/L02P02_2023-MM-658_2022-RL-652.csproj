@@ -7,4 +7,8 @@
     <RootNamespace>L02P02_2023_MM_658_2022_RL_652</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
+  </ItemGroup>
+
 </Project>
