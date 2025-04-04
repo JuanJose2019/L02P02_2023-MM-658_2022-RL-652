@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace L02P02_2023_MM_658_2022_RL_652.Models
 {
-    public class clientes
+    public class Clientes
     {
         [Key]
         public int id { get; set; }
@@ -15,21 +15,21 @@ namespace L02P02_2023_MM_658_2022_RL_652.Models
         public DateTime? created_at { get; set; }
     }
 
-    public class autores
+    public class Autores
     {
         [Key]
         public int id { get; set; }
         public string? autor { get; set; }
     }
 
-    public class categorias
+    public class Categorias
     {
         [Key]
         public int id { get; set; }
         public string? categoria { get; set; }
     }
 
-    public class libros
+    public class Libros
     {
         [Key]
         public int id { get; set; }
