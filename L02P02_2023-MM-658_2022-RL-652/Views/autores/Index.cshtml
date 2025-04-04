@@ -1,0 +1,29 @@
+﻿<form>
+    <head>
+        <title>Listado de Autores</title>
+        <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    </head>
+    <body>
+        <h2>Listado de Autores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var autor in Model)
+                {
+                    <tr>
+                        <td>@autor.Nombre</td>
+                        <td>
+                            <a asp-controller="Libros" asp-action="Index" asp-route-id="@autor.Id">Seleccionar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+</form>
+
