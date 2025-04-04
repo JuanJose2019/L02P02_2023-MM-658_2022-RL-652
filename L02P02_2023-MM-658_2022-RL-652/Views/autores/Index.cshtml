@@ -1,4 +1,4 @@
-﻿<form>
+﻿<form asp-action="autores">
     <head>
         <title>Listado de Autores</title>
         <link rel="stylesheet" type="text/css" href="~/css/style.css" />
@@ -17,6 +17,7 @@
                 {
                     <tr>
                         <td>@autor.Nombre</td>
+                        <td></td>
                         <td>
                             <a asp-controller="Libros" asp-action="Index" asp-route-id="@autor.Id">Seleccionar</a>
                         </td>
