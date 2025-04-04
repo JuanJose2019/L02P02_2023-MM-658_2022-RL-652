@@ -12,7 +12,7 @@ namespace L02P02_2023_MM_658_2022_RL_652.Controllers
         {
             _context = context;
         }
-
+        [Route("Libros/Index/{idAutor}")]
         public IActionResult Index(int idAutor)
         {
             var autor = _context.autores.FirstOrDefault(a => a.id == idAutor);

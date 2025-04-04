@@ -72,14 +72,14 @@ namespace L02P02_2023_MM_658_2022_RL_652.Models
 
     public class AutorLibrosViewModel
     {
-        public autores Autor { get; set; }
-        public List<libros> Libros { get; set; }
+        public Autores Autor { get; set; }
+        public List<Libros> Libros { get; set; }
     }
 
     public class ComentariosViewModel
     {
-        public autores Autor { get; set; }
-        public libros Libro { get; set; }
+        public Autores Autor { get; set; }
+        public Libros Libro { get; set; }
         public List<comentarios_libros> Comentarios { get; set; }
     }
 

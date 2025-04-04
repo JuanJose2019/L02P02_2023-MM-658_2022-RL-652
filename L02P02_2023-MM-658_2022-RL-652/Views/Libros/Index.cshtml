@@ -24,7 +24,7 @@
                     <tr>
                         <td>@libro.nombre</td>
                         <td>
-                            @Html.ActionLink("Seleccionar", "SeleccionarLibro", "Libros", new { id = libro.id }, new { @class = "btn btn-success btn-sm" })
+                            @Html.ActionLink("Seleccionar", "Index", "comentarios", new { id = libro.id }, new { @class = "btn btn-success btn-sm" })
                         </td>
                     </tr>
                 }

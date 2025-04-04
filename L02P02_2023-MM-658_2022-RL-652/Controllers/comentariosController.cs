@@ -13,7 +13,7 @@ namespace L02P02_2023_MM_658_2022_RL_652.Controllers
         {
             _context = context;
         }
-
+        [Route("comentarios/Index/{idLibro}")]
         public IActionResult Index(int idLibro)
         {
             // Obtener el libro seleccionado
