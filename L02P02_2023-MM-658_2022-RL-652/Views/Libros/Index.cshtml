@@ -1,0 +1,34 @@
+﻿@model L02P02_2023_MM_658_2022_RL_652.Models.AutorLibrosViewModel
+
+<div class="container">
+    <ul class="progressbar">
+        <li>AUTORES</li>
+        <li class="active">LIBROS</li>
+        <li>COMENTARIOS EXISTENTES</li>
+        <li>NUEVO COMENTARIO</li>
+    </ul>
+</div>
+<br />
+
+<div class="container">
+    <div class="card p-3 mb-3">
+        <h5><strong>Autor:</strong> @Model.Autor.autor</h5>
+    </div>
+
+    <div class="card p-3">
+        <h6 class="text-primary">Seleccione el Libro del autor</h6>
+        <table class="table">
+            <tbody>
+                @foreach (var libro in Model.Libros)
+                {
+                    <tr>
+                        <td>@libro.nombre</td>
+                        <td>
+                            @Html.ActionLink("Seleccionar", "SeleccionarLibro", "Libros", new { id = libro.id }, new { @class = "btn btn-success btn-sm" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

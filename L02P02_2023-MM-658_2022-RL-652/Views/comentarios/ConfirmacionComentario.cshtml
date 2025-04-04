@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model L02P02_2023_MM_658_2022_RL_652.Models.comentarios_libros
+
+<div class="container">
+    <div class="row">
+        <!-- Comentarios existentes -->
+        <div class="col-md-6">
+            <h4 class="text-primary">Comentarios Existentes</h4>
+            <div class="card p-2 mb-2">
+                <h6><strong>Usuario:</strong> @Model.usuario</h6>
+                <p>@Model.comentarios</p>
+                <small class="text-muted">Fecha: @Model.created_at.ToString("dd/MM/yyyy HH:mm")</small>
+            </div>
+        </div>
+
+        <!-- Sección de confirmación -->
+        <div class="col-md-6">
+            <h4 class="text-primary">Agregar un Comentario</h4>
+            <div class="form-group">
+                <label>Comentario</label>
+                <textarea class="form-control" disabled>@Model.comentarios</textarea>
+            </div>
+            <div class="alert alert-success mt-3">
+                <strong>Comentario adicionado con éxito!</strong>
+            </div>
+            <a href="@Url.Action("Index", "Libro")" class="btn btn-primary mt-3">Volver al Listado de Libros</a>
+        </div>
+    </div>
+</div>
+

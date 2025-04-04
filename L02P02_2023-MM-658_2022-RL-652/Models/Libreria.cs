@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace L02P02_2023_MM_658_2022_RL_652.Models
@@ -68,4 +69,18 @@ namespace L02P02_2023_MM_658_2022_RL_652.Models
         public string? usuario { get; set; }
         public DateTime created_at { get; set; }
     }
+
+    public class AutorLibrosViewModel
+    {
+        public autores Autor { get; set; }
+        public List<libros> Libros { get; set; }
+    }
+
+    public class ComentariosViewModel
+    {
+        public autores Autor { get; set; }
+        public libros Libro { get; set; }
+        public List<comentarios_libros> Comentarios { get; set; }
+    }
+
 }
