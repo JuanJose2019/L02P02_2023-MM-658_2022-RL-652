@@ -1,13 +1,24 @@
-﻿
-<form>
-    <head>
-        <title>Listado de Autores</title>
-        <link rel="stylesheet" type="text/css" href="~/css/style.css" />
-    </head>
-    <body>
-        <h2>Listado de Autores</h2>
-        <table>
-            <thead>
+﻿@model List<L02P02_2023_MM_658_2022_RL_652.Models.Autores>
+
+@{
+    ViewData["Title"] = "Listado de Autores";
+}
+
+<div class="container">
+    <ul class="progressbar">
+        <li class="active">AUTORES</li>
+        <li>LIBROS</li>
+        <li>COMENTARIOS EXISTENTES</li>
+        <li>NUEVO COMENTARIO</li>
+    </ul>
+</div>
+<br />
+<div class="container mt-4">
+    <h2 class="text-center text-primary">Listado de Autores</h2>
+
+    <div class="table">
+        <table class="table table-bordered">
+            <thead class="table">
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
@@ -15,18 +26,19 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var Autores in Model)
+                @foreach (var autor in Model)
                 {
                     <tr>
-                        <td>@Autores.id</td> 
-                        <td>@Autores.autor</td> 
-
+                        <td>@autor.id</td>
+                        <td>@autor.autor</td>
                         <td>
-                            <a asp-controller="Libros" asp-action="Index" asp-route-id="@Autores.id">Seleccionar</a>
+                            <a asp-controller="Libros" asp-action="Index" asp-route-id="@autor.id" class="btn btn-success">
+                                Seleccionar
+                            </a>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
-    </body>
-</form>
+    </div>
+</div>
