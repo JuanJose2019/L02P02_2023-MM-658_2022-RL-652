@@ -3,3 +3,32 @@
 *@
 @{
 }
+
+<html>
+<head>
+    <title>Listado de Libros</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+</head>
+<body>
+    <h2>Listado de Libros</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var libro in Model)
+            {
+                <tr>
+                    <td>@libro.Titulo</td>
+                    <td>
+                        <a asp-controller="Comentarios" asp-action="Index" asp-route-id="@libro.Id">Seleccionar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

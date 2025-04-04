@@ -13,9 +13,9 @@ namespace L02P02_2023_MM_658_2022_RL_652.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var autores = _context.autores.ToListAsync();
+            var autores = await _context.autores.ToListAsync();
             return View(autores);
         }
     }

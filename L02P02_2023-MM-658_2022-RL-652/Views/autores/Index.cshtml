@@ -1,4 +1,5 @@
-﻿<form asp-action="autores">
+﻿
+<form>
     <head>
         <title>Listado de Autores</title>
         <link rel="stylesheet" type="text/css" href="~/css/style.css" />
@@ -8,18 +9,20 @@
         <table>
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Nombre</th>
-                    <th>Accion</th>
+                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var autor in Model)
+                @foreach (var Autores in Model)
                 {
                     <tr>
-                        <td>@autor.Nombre</td>
-                        <td></td>
+                        <td>@Autores.id</td> 
+                        <td>@Autores.autor</td> 
+
                         <td>
-                            <a asp-controller="Libros" asp-action="Index" asp-route-id="@autor.Id">Seleccionar</a>
+                            <a asp-controller="Libros" asp-action="Index" asp-route-id="@Autores.id">Seleccionar</a>
                         </td>
                     </tr>
                 }
@@ -27,4 +30,3 @@
         </table>
     </body>
 </form>
-
