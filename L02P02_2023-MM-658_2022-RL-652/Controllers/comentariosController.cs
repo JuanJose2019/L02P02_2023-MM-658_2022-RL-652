@@ -1,0 +1,12 @@
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace L02P02_2023_MM_658_2022_RL_652.Controllers
+{
+    public class comentariosController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
+}
